@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home main</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		ul,
+		ol,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: #666;
+			cursor: pointer;
+		}
+
+		.p1 {
+			font-family: Nunito;
+			font-weight: 300;
+			font-style: normal;
+		}
+
+		#s_btnbox > button:hover {
+			padding:15px 30px;
+			border:0;
+			background-color:black;
+			color:#eee;
+			margin:20px 0 0 0px;
+			border-radius: 20px;
+			font-size:13px;
+		}
+
+
+
+		#wrap {
+			width: 100%;
+			height: auto;
+			background-color: green;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		/*header*/
+
+		header {
+			width: 100%;
+			height: 43px;
+			background-color: yellow;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+
+		.nav {
+			width: 300px;
+			height: 35px;
+			background-color: red;
+		}
+
+		.nav>ul>li {
+			float: left;
+			margin: 8px;
+			font-size: 13px;
+		}
+
+		.nav>ul>li>a>img {
+			width: 10px;
+			height: 10px;
+			margin: 0 0 0 5px;
+		}
+
+
+		.f_logo {
+			width: 210px;
+			height: 120px;
+			background-color: greenyellow;
+		}
+
+		.sns {
+			width: 400px;
+			height: 35px;
+			background-color: skyblue;
+		}
+
+		.sns>ul>li {
+			float: left;
+			margin: 8px;
+			font-size: 13px;
+		}
+
+		.sns>ul>li>a>img {
+			width: 10px;
+			height: 10px;
+			margin: 0 5px 0 0px;
+		}
+
+
+
+		/*slider*/
+
+		#slider {
+			width: 100%;
+			height: 860px;
+			background-image: url(img/1.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.s_textbox {
+			text-align: center;
+			padding: 180px 0 0 0px;
+			color: #eee;
+		}
+
+		.s_textbox>span {
+			font-size: 125px;
+			font-family: Arial Black;
+			margin: 0;
+		}
+
+		.s_textbox>p {
+			margin: 35px;
+		}
+
+		.s_textbox>p>a {
+			text-decoration: none;
+			background-color: #a4b180;
+			color: #eee;
+			padding: 10px 35px;
+			border-radius: 20px;
+			font-size: 13px;
+		}
+
+		.s_textbox>h5 {
+			font-size: 20px;
+			font-family: Nunito;
+			font-weight: 300;
+			font-style: normal;
+		}
+
+		/*artcle*/
+
+		article {
+			width: 100%;
+			height: 465px;
+			background-color: violet;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.a_textbox {
+			width: 750px;
+			height: 200px;
+			background-color: orange;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			color: black;
+		}
+
+		.a_textbox>h6 {
+			font-size: 13px;
+		}
+
+		.a_textbox>p {
+			font-size: 20px;
+		}
+
+		.a_textbox>h5 {
+			color: #666;
+			font-family: Nunito;
+			font-weight: 300;
+			font-style: normal;
+		}
+
+
+		/*services*/
+
+		#services {
+			width: 100%;
+			height: 860px;
+			background-color: grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+
+		#services>h1 {
+			width: 100%;
+			background-color: rebeccapurple;
+			font-size: 50px;
+			color: #000000;
+			text-align: center;
+		}
+
+
+		#services>h6 {
+			width: 100%;
+			background-color: cyan;
+		}
+
+
+		.s_imgbox {
+			width: 80%;
+			height: 500px;
+			background-color: yellowgreen;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-content: center;
+			margin: 10px;
+		}
+
+		
+		.s_img {
+			width: 370px;
+			height: 390px;
+			background-color: green;
+			margin: 10px;
+			
+		}
+
+
+		.s_img > img {
+			width:100%;
+			height:50%;
+		}
+
+
+		.s_img > h4 {
+			font-size:30px;
+			margin:20px 0 5px 0px;
+		}
+
+
+		.s_img > h3 {
+			font-size:15px;
+			margin:15px 0 0 0px;
+		}
+
+		.s_img > p {
+			padding:10px;
+		}
+
+
+
+		#s_btnbox {
+			width: 400px;
+			height: 150px;
+			background-color: blueviolet;
+			padding:20px;
+		}
+
+		#s_btnbox > button {
+			padding:15px 30px;
+			border:0;
+			background-color:beige;
+			margin:20px 0 0 0px;
+			border-radius: 20px;
+			font-size:13px;
+		}
+
+
+
+		/*gallery*/
+
+		#gallery {
+			width: 100%;
+			height: 1400px;
+			background-color: purple;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content: center;
+			flex-direction:column;
+			
+		}
+
+		#gallery > h1 {
+			width:100%; 
+			background-color:skyblue;
+		}
+
+		#gallery > h6{
+			width:100%;
+			background-color:pink;
+		}
+
+		#gallery_menu {
+			width:100%; 
+			background-color:blue;
+		}
+
+		#gallery_menu > ul {
+			display:flex;
+			align-items:center;
+			justify-content: center;
+		}
+
+		#gallery_menu > ul > li {
+			float:left; 
+
+			margin:0px 10px;
+		}
+
+
+		.g_imgbox {
+			width: 100%px;
+			height: 900px;
+			background-color: aqua;
+			display:flex;
+			flex-flow: row wrap;
+			justify-content:center;
+			align-items:center;
+		}
+
+		
+
+
+		#g_img {
+			width: 32%;
+			height: 415px;
+			background-color: red;
+			margin:10px;
+		}
+
+		.gallery_tip {
+			width: 100%;
+			height: 290px;
+			background-color: royalblue;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		.g_tipbox {
+			width:30%;
+			height:50%;
+			background-color: khaki;
+			margin:10px;
+
+		}
+
+
+
+		/*team*/
+		#team {
+			width: 100%;
+			height: 815px;
+			background-color: tomato;
+		}
+
+		.t_imgbox {
+			width: 360px;
+			height: 360px;
+			background-color: deepskyblue;
+		}
+
+
+		#title {
+			width: 100%;
+			height: 430px;
+			background-color: yellow;
+		}
+
+		#t_textbox {
+			width: 310px;
+			height: 370px;
+			background-color: black;
+			margin: 5px;
+		}
+
+		/*review*/
+
+		#review {
+			width: 100%;
+			height: 450px;
+			background-color: greenyellow;
+		}
+
+		.r_textbox {
+			width: 400px;
+			height: 400px;
+			background-color: darkred;
+		}
+
+
+		/*social*/
+
+		#social {
+			width: 100%;
+			height: 450px;
+			background-color: beige;
+		}
+
+
+		/*sign_up*/
+
+		#signup {
+			width: 100%;
+			height: 600px;
+			background-color: whitesmoke;
+		}
+
+		.position {
+			width: 370px;
+			height: 360px;
+			background-color: green;
+		}
+
+		.message {
+			width: 780px;
+			height: 360px;
+			background-color: red;
+		}
+
+		/*sns*/
+
+		#sns {
+			width: 100%;
+			height: 200px;
+			background-color: rebeccapurple;
+		}
+
+		/*footer*/
+
+		footer {
+			width: 100%;
+			height: 650px;
+			background-color: tomato;
+		}
+
+		.address {
+			width: 540px;
+			height: 130px;
+			background-color: gray;
+		}
+
+		.e_logo {
+			width: 275px;
+			height: 170px;
+			background-color: whitesmoke;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="wrap">
+
+
+		<!--header/nav-->
+
+		<header>
+			<div class="nav">
+				<ul>
+					<li><a href="#">HOME<img src="img/v.png" alt="화살표"></a></li>
+					<li><a href="#">PAGES<img src="img/v.png" alt="화살표"></a></li>
+					<li><a href="#">PORTFPLIO<img src="img/v.png" alt="화살표"></a></li>
+					<li><a href="#">SHOP<img src="img/v.png" alt="화살표"></a></li>
+					<li><a href="#">BLOG<img src="img/v.png" alt="화살표"></a></li>
+
+				</ul>
+			</div>
+
+			<!--logo-->
+			<div class="f_logo">
+				<img src="img/logo.png" alt="로고1">
+			</div>
+
+			<!--sns-->
+			<div class="sns">
+				<ul>
+					<li><a href="#"><img src="img/fe.png" alt="페이스북로고">| FACEBOOK</a></li>
+					<li><a href="#"><img src="img/tw.png" alt="트위터로고">| TWITTER</a></li>
+					<li><a href="#"><img src="img/in.png" alt="인스타로고">| INSRAGRAM</a></li>
+					<li><a href="#"><img src="img/vi.png" alt="vimeo로고">| VIMEO</a></li>
+				</ul>
+			</div>
+
+		</header>
+
+		<!--slider-->
+
+		<div id="slider">
+
+			<div class="s_textbox">
+
+				<h6>GREETINGS, WE ARE</h6>
+				<span>FORESTER</span>
+				<h5>
+					Unordinary digital agency crafting sophisticated and<br>
+					eccentric stuff that will leave you speechless.
+				</h5>
+				<p><a href="">EXPLORE NOW</a></p>
+
+			</div>
+
+
+		</div>
+
+		<!--article-->
+
+		<article>
+			<div class="a_textbox">
+
+				<h6>out story</h6>
+
+				<p class="p1">
+					Unordinary digital agency crafting sophisticated and eccentric stuff that will leave you speechless,
+					we had opportunity to work on wide variety of projects for different clients around the world,
+					we're responsible and our client is our priority
+				</p>
+
+				<h5>
+					Interested in our story and want to meet us even better?
+					<a href="#"><ins>Read More</ins></a>
+				</h5>
+
+			</div>
+		</article>
+
+
+		<!--services-->
+
+		<section id="services">
+			<h6>OUR EXPERTISE</h6>
+			<h1>Services</h1>
+
+			<div class="s_imgbox">
+				<div class="s_img">
+					<img src="img/2.jpg" alt="산이미지">
+					<h4>Web Design</h4>
+					<p class="p1">
+						Crafting visually stunning designs that will leave you speechless<br>
+					</p>
+					<h3><a href="#">READ MORE</a></h3>
+					
+				</div>
+
+
+				<div class="s_img">
+					<img src="img/2.jpg" alt="산이미지">
+					<h4>Web Design</h4>
+					<p class="p1">
+						Crafting visually stunning designs that will leave you speechless<br>
+					</p>
+					<h3><a href="#">READ MORE</a></h3>
+					
+				</div>
+
+
+				<div class="s_img">
+					<img src="img/2.jpg" alt="산이미지">
+					<h4>Marketing</h4>
+					<p class="p1">
+						We'll advertise your product using latest and unique fresh marketing methods.<br>
+					</p>
+					<h3><a href="#">READ MORE</a></h3>
+				</div>
+			</div>
+
+			<div id="s_btnbox">
+				<p class="p1">Top quality services executed by our devoted, yet<br>
+					creative team. Nothing less than creative.</p>
+
+				<button><a href="#"><b>LET'S GET IN TOUCH</b></a></button>
+			</div>
+		</section>
+
+		<!--gallery-->
+
+		<div id="gallery">
+
+			<h6>OUR PORTFOLIO</h6>
+			<h1>Gallery</h1>
+
+
+			<div id="gallery_menu">
+				<ul>
+					<li><a href="#">ALL</a></li>
+					<li><a href="#">BRANDING</a></li>
+					<li><a href="#">DIGITAL</a></li>
+					<li><a href="#">PRINT</a></li>
+				</ul>
+			</div>
+
+			<div class="g_imgbox">
+
+				<div id="g_img">1</div>
+				<div id="g_img">2</div>
+				<div id="g_img">3</div>
+				<div id="g_img">4</div>
+				<div id="g_img">5</div>
+				<div id="g_img">6</div>
+			</div>
+
+
+			<div class="gallery_tip">
+				<div class="g_tipbox"></div>
+				<div class="g_tipbox"></div>
+				<div class="g_tipbox"></div>
+			</div>
+		</div>
+
+		<!--team crew-->
+
+		<div id="team">
+			<div class="t_imgbox"></div>
+			<div class="t_imgbox"></div>
+			<div class="t_imgbox"></div>
+		</div>
+
+
+		<div id="title">
+			<div id="t_textbox"></div>
+			<div id="t_textbox"></div>
+			<div id="t_textbox"></div>
+			<div id="t_textbox"></div>
+		</div>
+
+
+		<div id="review">
+			<div class="r_textbox"></div>
+		</div>
+
+
+		<div id="social"></div>
+
+
+		<div id="signup">
+			<div class="position"></div>
+			<div class="message"></div>
+		</div>
+
+		<div id="sns"></div>
+
+
+		<footer>
+			<div class="address"></div>
+			<div class="e_logo"></div>
+		</footer>
+
+
+	</div>
+
+</body>
+
+</html>
